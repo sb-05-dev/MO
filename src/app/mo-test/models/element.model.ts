@@ -1,12 +1,14 @@
 export interface Image {
-  id: string;
+  '@id': string;
+  '@type': string;
   url: string;
   alt: string;
   isActif: boolean;
 }
 
 export interface Piece {
-  id: string;
+  '@id': string;
+  '@type': string;
   description: string;
   surface: string;
   items: Item[];
@@ -14,14 +16,16 @@ export interface Piece {
 }
 
 export interface Item {
-  id: string;
+  '@id': string;
+  '@type': string;
   space: string;
   type: string;
   isActif: boolean;
 }
 
 export interface Category {
-  id: string;
+  '@id': string;
+  '@type': string;
   name: string;
   info: string;
   imageUrl: string;
@@ -29,7 +33,8 @@ export interface Category {
 }
 
 export interface User {
-  id: string;
+  '@id': string;
+  '@type': string;
   email: string;
   telephone: string;
   fullName: string;
@@ -41,9 +46,9 @@ export interface User {
 }
 
 export interface MoElement {
-  id: string;
+  "@id": string;
   name: string;
-  content: string;
+  '@content': string;
   description: string;
   locate: string;
   price: string;
@@ -55,7 +60,7 @@ export interface MoElement {
   city: string;
   images: Image[];
   pieces: Piece[];
-  elementType: { id: string; name: string; isActif: boolean; };
+  elementType: { '@id': string; name: string; isActif: boolean; };
   user: User;
   category: Category;
   isActif: boolean;

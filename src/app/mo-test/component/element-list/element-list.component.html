@@ -1,5 +1,6 @@
 <div *ngFor="let element of elements" class="mb-6 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
   <h2 class="text-2xl font-semibold text-gray-800">{{ element.name }}</h2>
+  <h2 class="text-2xl font-semibold text-gray-800">{{ element['@id'] }}</h2>
   <p class="mt-2 text-gray-600">{{ element.description }}</p>
   <p class="mt-1 text-gray-800 font-bold">Prix : {{ element.price | currency: "GNF" }}</p>
   <p class="mt-1 text-gray-600">Localisation : {{ element.locate }}</p>
@@ -9,6 +10,7 @@
 
   <div class="mt-4 grid grid-cols-2 gap-4"> 
     <ng-container *ngFor="let image of element.images">
+      <h3>Image ID {{image['@id']}} </h3>
       <div class="relative group">
         <img *ngIf="image.isActif" [src]="'https://abc.monimba.com/' + image.url" [alt]="image.alt"
              class="w-full h-auto object-cover rounded-md shadow-sm transition-transform duration-300 transform group-hover:scale-105" />
@@ -19,6 +21,7 @@
   <h3 class="mt-6 text-lg font-semibold border-b border-gray-300 pb-2">Détails des pièces :</h3>
   <div *ngFor="let piece of element.pieces" class="mt-2 border-t border-gray-300 pt-2">
     <h4 class="font-medium">{{ piece.description }} ({{ piece.surface }} m²)</h4>
+    <h2> {{piece['@id']}} </h2>
     <div *ngFor="let item of piece.items" class="mt-1">
       <p>- {{ item.space }} ({{ item.type }})</p>
     </div>
@@ -29,7 +32,7 @@
   <p>Nom : {{ element.user.fullName }}</p>
   <p>Email : {{ element.user.email }}</p>
   <p>Téléphone : {{ element.user.telephone }}</p>
-  
+  <h6>Type: {{element.user['@type']}} <br> id: {{element.user['@id']}} </h6>
   <h3 class="mt-6 text-lg font-semibold border-b border-gray-300 pb-2">Catégorie :</h3>
   <p>Nom : {{ element.category.name }}</p>
   <p>Information : {{ element.category.info }}</p>

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError } from 'rxjs';
-import { MoElement } from '../models/element.model';
 import { environment } from '../../environment/environment';
 
 @Injectable({
@@ -14,14 +13,14 @@ export class ElementService {
 
   getElements(isActif: true): Observable<any> {
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${environment.authToken}` // Ajout du token ici
+      'Authorization': `Bearer ${environment.authToken}`
     });
 
     return this.http.get(`${this.apiUrl}?isActif=${isActif}`, { headers })
       .pipe(
         catchError(error => {
           console.error('Erreur lors de la récupération des éléments:', error);
-          throw error; // Gérer l'erreur comme vous le souhaitez
+          throw error; 
         })
       );
   }

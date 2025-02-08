@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
     apiUrl: 'https://abc.monimba.com/api', 
-    authToken: ''
-  };
+    authToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3Mjg5ODYxMTMsImV4cCI6MTcyOTAwNDExMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sImRhdGEiOnsidXNlciI6ImRldjNAbW8uY29tIiwiaWQiOiIxZWY4OGIxYy01NzJjLTYwZTAtYjZjNy1mZjdkY2RhNWM5ZTkifSwidXNlcm5hbWUiOiJkZXYzQG1vLmNvbSJ9.Pj1D6PoTPHAp7jLVw6guYwffiDzqGGvSerFduWZtP04-f4f3rEVE__To1iLtG7yiQmYOaYcUEcMYYB9BAZgKWGdEEyUeW7zsTmd2RtJBIXEe_pE3_dzw8_kus4_8y8aBnfHtr9PMKWrsPveXDeHCPzbjIYn2GTtzgcbEV-GiNXJgeRgiHz5mXVQZNql3iHOqNj944z0yk3EtorL_JVvTU6J36CrfeDaIJgD2dzktBFrqYaE1lNLGAwGbcyFKkCFBZqnO1ZNT_UTlvrMys4wNKs0e4puVGYgKG9XzBCeQtdvsdYBH6RhzMakaO7PJxGJ1zAo8rFx6unKnZuOYfvRrAw'
+};
   

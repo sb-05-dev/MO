@@ -3,13 +3,18 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ElementListComponent } from './component/element-list/element-list.component';
 import { ElementListRoutingModule } from './element-list-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
-    ElementListComponent
+    ElementListComponent,
+    UserDashboardComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     ElementListRoutingModule
   ]
 })
